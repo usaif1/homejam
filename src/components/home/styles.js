@@ -2,7 +2,7 @@
 import makeStyles from "@material-ui/styles/makeStyles";
 
 export const useStyles = makeStyles((theme) => ({
-  /*navbar*/
+  /*Navbar*/
   nav: {
     margin: "auto",
     display: "flex",
@@ -58,6 +58,31 @@ export const useStyles = makeStyles((theme) => ({
     opacity: "0.6",
     fontWeight: "400",
     width: "60rem",
+  },
+
+  /*Labels*/
+  roundedContainer: {
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    color: "white",
+    fontSize: "1.8rem",
+    borderRadius: "50%",
+    border: "1px solid white",
+    height: "25rem",
+    width: "25rem",
+  },
+  labelNumber: {
+    fontFamily: "'Libre Baskerville', serif",
+    fontSize: "2.4rem",
+  },
+
+  labelText: {
+    fontFamily: "'Nunito', sans-serif",
+    color: "white",
+    opacity: "0.6",
+    margin: "0",
   },
 
   /*Media Queries*/

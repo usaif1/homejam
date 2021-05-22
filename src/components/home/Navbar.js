@@ -1,9 +1,9 @@
 //dependencies
 import React from "react";
 import { Link } from "react-router-dom";
-import SearchIcon from "@material-ui/icons/Search";
-import LocalMallOutlinedIcon from "@material-ui/icons/LocalMallOutlined";
-import MenuIcon from "@material-ui/icons/Menu";
+import { Search, Menu, LocalMallOutlined } from "@material-ui/icons";
+// import LocalMallOutlined from "@material-ui/icons/LocalMallOutlined";
+// import  from "@material-ui/icons/Menu";
 
 //imports
 import homejamNavLogo from "../../assets/navbar/homejam-nav-logo.png";
@@ -20,7 +20,7 @@ const deskTopLinks = [
   {
     text: "Search",
     path: "/search",
-    icon: <SearchIcon style={iconStyles} />,
+    icon: <Search style={iconStyles} />,
   },
   {
     text: "Help",
@@ -35,19 +35,19 @@ const deskTopLinks = [
   {
     text: "",
     path: "/cart",
-    icon: <LocalMallOutlinedIcon style={iconStyles} />,
+    icon: <LocalMallOutlined style={iconStyles} />,
   },
 ];
 
 const mobileLinks = [
   {
-    icon: <SearchIcon style={iconStyles} />,
+    icon: <Search style={iconStyles} />,
   },
   {
-    icon: <LocalMallOutlinedIcon style={iconStyles} />,
+    icon: <LocalMallOutlined style={iconStyles} />,
   },
   {
-    icon: <MenuIcon style={iconStyles} />,
+    icon: <Menu style={iconStyles} />,
   },
 ];
 

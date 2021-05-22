@@ -20,6 +20,9 @@ export const useStyles = makeStyles((theme) => ({
   },
 
   [theme.breakpoints.down("sm")]: {
+    homeWrapper: {
+      height: "unset",
+    },
     homeContainer: {
       maxWidth: "100%",
     },
