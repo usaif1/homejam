@@ -70,8 +70,8 @@ export const useStyles = makeStyles((theme) => ({
     fontSize: "1.8rem",
     borderRadius: "50%",
     border: "1px solid white",
-    height: "25rem",
-    width: "25rem",
+    height: "21rem",
+    width: "21rem",
   },
   labelNumber: {
     fontFamily: "'Libre Baskerville', serif",
@@ -104,6 +104,14 @@ export const useStyles = makeStyles((theme) => ({
     subHeading: {
       fontSize: "1.6rem",
       width: "unset",
+    },
+    /*label*/
+    roundedContainer: {
+      height: "16rem",
+      width: "16rem",
+    },
+    labelNumber: {
+      margin: "0",
     },
   },
 }));

@@ -6,8 +6,12 @@ import {
   FavoriteBorderOutlined,
 } from "@material-ui/icons";
 
+// Import Swiper styles
+import "swiper/swiper-bundle.css";
+
 //imports
 import { useStyles } from "./styles";
+import "./swiper.css";
 
 const iconStyles = {
   fontSize: "2.5rem",
@@ -49,15 +53,22 @@ const Labels = () => {
         justifyContent: "space-around",
       }}
     >
-      {labels.map((label) => {
-        return (
-          <div className={classes.roundedContainer}>
-            <div>{label.icon}</div>
-            <p className={classes.labelNumber}>{label.number}</p>
-            <p className={classes.labelText}>{label.text}</p>
-          </div>
-        );
-      })}
+      <Swiper
+        spaceBetween={window.innerWidth > 600 ? 100 : 20}
+        slidesPerView={window.innerWidth > 600 ? 5 : 2}
+      >
+        {labels.map((label) => {
+          return (
+            <SwiperSlide style={{ display: "flex", width: "20rem" }}>
+              <div className={classes.roundedContainer}>
+                <div>{label.icon}</div>
+                <p className={classes.labelNumber}>{label.number}</p>
+                <p className={classes.labelText}>{label.text}</p>
+              </div>
+            </SwiperSlide>
+          );
+        })}
+      </Swiper>
     </div>
   );
 };
