@@ -9,12 +9,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: linear-gradient(
-    180deg,
-    rgba(5, 11, 20, 0.28) 0%,
-    rgba(1, 13, 32, 0.69) 67.53%,
-    #0a0b1a 85.33%
-  );
+  background: #0a0b1a;
   background-repeat: no-repeat;
 }
 

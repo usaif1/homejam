@@ -10,8 +10,8 @@ export const useStyles = makeStyles((theme) => ({
     background: `url(${bgImage})`,
     backgroundRepeat: "no-repeat",
     backgroundPosition: "top",
-    backgroundSize: "cover",
-    height: "100vh",
+    backgroundSize: "contain",
+    // height: "100vh",
     paddingTop: "1rem",
   },
 
@@ -21,7 +21,7 @@ export const useStyles = makeStyles((theme) => ({
 
   [theme.breakpoints.down("sm")]: {
     homeWrapper: {
-      height: "unset",
+      backgroundSize: "initial",
     },
     homeContainer: {
       maxWidth: "100%",

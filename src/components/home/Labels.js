@@ -54,12 +54,12 @@ const Labels = () => {
       }}
     >
       <Swiper
-        spaceBetween={window.innerWidth > 600 ? 100 : 20}
+        spaceBetween={window.innerWidth > 600 ? 50 : 18}
         slidesPerView={window.innerWidth > 600 ? 5 : 2}
       >
         {labels.map((label) => {
           return (
-            <SwiperSlide style={{ display: "flex", width: "20rem" }}>
+            <SwiperSlide style={{ display: "flex" }} slidesPerView={2}>
               <div className={classes.roundedContainer}>
                 <div>{label.icon}</div>
                 <p className={classes.labelNumber}>{label.number}</p>

@@ -7,11 +7,12 @@
 }
 
 .swiper-slide {
-  width: 25rem;
+  width: 25rem !important;
 }
 
 /* media queries for swiper  */
 @media only screen and (max-width: 600px) {
-  .swiper-container {
+  .swiper-slide {
+    width: initial !important;
   }
 }

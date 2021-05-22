@@ -85,6 +85,76 @@ export const useStyles = makeStyles((theme) => ({
     margin: "0",
   },
 
+  /*Upcoming Shows*/
+  upcomingContainer: {
+    marginTop: "12.5rem",
+    display: "flex",
+  },
+
+  artistImage: {
+    objectFit: "contain",
+    width: "100%",
+  },
+
+  contentContainer: {
+    marginLeft: "2rem",
+  },
+
+  contentWrapper: {
+    background: "rgba(229, 197, 88, 1)",
+    maxWidth: "fit-content",
+    padding: "0 5px",
+  },
+
+  badge: {
+    color: "#682F26",
+    fontSize: "1.2rem",
+    fontWeight: "600",
+    fontFamily: "'Nunito', sans-serif",
+  },
+
+  artistName: {
+    fontSize: "2rem",
+    fontFamily: "'Libre Baskerville', serif",
+    fontWeight: "700",
+  },
+
+  moreContainer: {
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+  },
+
+  moreWrapper: {
+    display: "flex",
+    alignItems: "center",
+    color: "rgba(2, 89, 235, 1)",
+  },
+
+  more: {
+    fontSize: "16px",
+    fontFamily: "'Nunito', sans-serif",
+    fontWeight: "600",
+  },
+
+  arrowIcon: {
+    fontSize: "30px",
+    marginLeft: "1rem",
+  },
+
+  extraContainer: {
+    display: "flex",
+    alignItems: "center",
+    marginRight: "2rem",
+  },
+
+  pipe: {
+    fontSize: "1.6rem",
+    color: "white",
+    opacity: "0.6",
+  },
+
   /*Media Queries*/
   [theme.breakpoints.down("sm")]: {
     /*navbar*/
