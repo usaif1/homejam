@@ -1,6 +1,10 @@
 //dependencies
 import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
 import ArrowRightAltIcon from "@material-ui/icons/ArrowRightAlt";
+
+// Import Swiper styles
+import "swiper/swiper-bundle.css";
 
 //imports
 import benny from "../../assets/upcoming/benny.png";
@@ -71,9 +75,17 @@ const UpcomingShows = () => {
 
   return (
     <div className={classes.upcomingContainer}>
-      {artists.map((artist) => {
-        return artistCard(artist);
-      })}
+      <Swiper
+        style={{ paddingTop: "1rem" }}
+        spaceBetween={window.innerWidth > 600 ? 50 : 5}
+        // slidesPerView={window.innerWidth > 600 ? 5 : }
+        // freeMode={true}
+        centeredSlides={true}
+      >
+        {artists.map((artist) => {
+          return <SwiperSlide>{artistCard(artist)}</SwiperSlide>;
+        })}
+      </Swiper>
     </div>
   );
 };

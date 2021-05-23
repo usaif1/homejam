@@ -4,15 +4,16 @@
 
 .swiper-wrapper {
   display: flex;
+  margin-left: 2rem;
 }
 
 .swiper-slide {
-  width: 25rem !important;
+  /* width: 25rem !important; */
 }
 
 /* media queries for swiper  */
 @media only screen and (max-width: 600px) {
   .swiper-slide {
-    width: initial !important;
+    /* width: initial !important; */
   }
 }

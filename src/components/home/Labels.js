@@ -54,7 +54,7 @@ const Labels = () => {
       }}
     >
       <Swiper
-        spaceBetween={window.innerWidth > 600 ? 50 : 18}
+        spaceBetween={window.innerWidth > 600 ? 50 : 15}
         slidesPerView={window.innerWidth > 600 ? 5 : 2}
       >
         {labels.map((label) => {

@@ -9,8 +9,10 @@ const ShadowCard = ({ children, style }) => {
 
   return (
     <>
-      <div className={classes.card}>{children}</div>
-      <div className={classes.shadow}></div>
+      <div className={classes.card}>
+        {children}
+        <div className={classes.shadow} />
+      </div>
     </>
   );
 };

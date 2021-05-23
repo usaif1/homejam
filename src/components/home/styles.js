@@ -89,15 +89,19 @@ export const useStyles = makeStyles((theme) => ({
   upcomingContainer: {
     marginTop: "12.5rem",
     display: "flex",
+    justifyContent: "space-around",
   },
 
   artistImage: {
     objectFit: "contain",
     width: "100%",
+    verticalAlign: "bottom",
   },
 
   contentContainer: {
-    marginLeft: "2rem",
+    paddingLeft: "2rem",
+    paddingTop: "3rem",
+    background: "#111229",
   },
 
   contentWrapper: {
@@ -111,6 +115,7 @@ export const useStyles = makeStyles((theme) => ({
     fontSize: "1.2rem",
     fontWeight: "600",
     fontFamily: "'Nunito', sans-serif",
+    margin: "0",
   },
 
   artistName: {
@@ -153,6 +158,10 @@ export const useStyles = makeStyles((theme) => ({
     fontSize: "1.6rem",
     color: "white",
     opacity: "0.6",
+  },
+
+  slideClass: {
+    width: "300px",
   },
 
   /*Media Queries*/
