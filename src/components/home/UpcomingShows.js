@@ -72,7 +72,7 @@ const UpcomingShows = () => {
               left: "2rem",
               shadow: {
                 width: 23,
-                height: "38rem",
+                height: "37rem",
               },
             },
           }}
