@@ -19,7 +19,7 @@ export const useStyles = makeStyles((theme) => ({
     maxWidth: "85%",
   },
 
-  [theme.breakpoints.down("sm")]: {
+  [theme.breakpoints.down("xs")]: {
     homeWrapper: {
       backgroundSize: "initial",
     },

@@ -234,7 +234,7 @@ export const useStyles = makeStyles((theme) => ({
   },
 
   /*Media Queries*/
-  [theme.breakpoints.down("sm")]: {
+  [theme.breakpoints.down("xs")]: {
     /*navbar*/
     navLogoContainer: {
       width: "25%",
@@ -265,7 +265,8 @@ export const useStyles = makeStyles((theme) => ({
       fontSize: "2rem",
     },
     reviewText: {
-      fontSize: "1.4rem",
+      fontSize: "1.2rem",
+      margin: "2rem 0 0 0",
     },
   },
 }));
