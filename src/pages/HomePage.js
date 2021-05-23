@@ -28,6 +28,7 @@ const HomePage = () => {
           <Heading />
           <Labels />
           <UpcomingShows />
+          <Reviews />
         </Container>
       </div>
     </div>

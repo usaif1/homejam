@@ -1,24 +1,38 @@
 //dependencies
 import { makeStyles } from "@material-ui/styles";
 
-export const useStyles = makeStyles((theme) => ({
+export const useStyles = makeStyles((theme, style) => ({
   card: {
     position: "relative",
     background: "rgba(17, 18, 41, 1)",
-    zIndex: "2",
-    width: "27rem",
-    height: "39rem",
-    borderRadius: "0.8rem",
+    width: (style) => `${style.width}rem`,
+    height: (style) => style.height,
+    borderRadius: (style) => style.borderRadius,
+    border: (style) => style.border,
+    padding: (style) => style.padding,
     color: "white",
   },
   shadow: {
     position: "relative",
-    top: "-40.5rem",
-    left: "2.5rem",
-    borderRadius: "0.8rem",
-    background: "linear-gradient(163.41deg, #301A68 0.11%, #234C97 170.69%)",
+    top: (style) => style.top,
+    left: (style) => style.left,
+    borderRadius: (style) => style.borderRadius,
+    background: (style) => style.background,
     zIndex: "-1",
-    width: "26rem",
-    height: "39rem",
+    width: (style) => `${style.width - 1}rem`,
+    height: (style) => style.height,
+  },
+
+  [theme.breakpoints.down("sm")]: {
+    card: {
+      width: (style) => `${style.mobile.width}rem`,
+      height: (style) => style.mobile.height,
+    },
+    shadow: {
+      width: (style) => `${style.mobile.width}rem`,
+      height: (style) => style.mobile.height,
+      top: (style) => style.mobile.top,
+      left: (style) => style.mobile.left,
+    },
   },
 }));

@@ -13,6 +13,7 @@ export const useStyles = makeStyles((theme) => ({
     backgroundSize: "contain",
     // height: "100vh",
     paddingTop: "1rem",
+    marginBottom: "2rem",
   },
 
   homeContainer: {

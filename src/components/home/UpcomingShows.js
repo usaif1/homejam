@@ -43,7 +43,25 @@ const UpcomingShows = () => {
 
   const artistCard = (artist) => {
     return (
-      <ShadowCard>
+      <ShadowCard
+        style={{
+          background:
+            "linear-gradient(163.41deg, #301A68 0.11%, #234C97 170.69%)",
+          width: 27,
+          height: "39rem",
+          borderRadius: "0.8rem",
+          border: "none",
+          top: "-40.5rem",
+          left: "2.5rem",
+          padding: "0",
+          mobile: {
+            width: 27,
+            height: "39rem",
+            top: "-40.5rem",
+            left: "2.5rem",
+          },
+        }}
+      >
         <div>
           <img
             src={artist.img}

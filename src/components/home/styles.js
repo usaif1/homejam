@@ -194,6 +194,45 @@ export const useStyles = makeStyles((theme) => ({
     borderRadius: "0.8rem",
   },
 
+  /*Reviews*/
+  reviewCardContainer: {
+    width: "36rem",
+    height: "25rem",
+    border: "2px solid #E5AF56",
+    position: "relative",
+    zIndex: "2",
+    background: "black",
+    paddingLeft: "2.4rem",
+    background: "#0A0B1A",
+    borderRadius: "1.6rem",
+  },
+
+  reviewHeader: {
+    marginTop: "2rem",
+    display: "flex",
+    alignItems: "center",
+    background: "inherit",
+  },
+
+  reviewNameContainer: {
+    marginLeft: "2rem",
+  },
+
+  flag: {
+    width: "24px",
+    height: "24px",
+  },
+  location: {
+    color: "#E5C558",
+    fontSize: "1.1rem",
+    fontWeight: "400",
+    margin: "0 0 0 1rem",
+  },
+  reviewText: {
+    margin: "5rem 0 0 0",
+    fontSize: "1.6rem",
+  },
+
   /*Media Queries*/
   [theme.breakpoints.down("sm")]: {
     /*navbar*/

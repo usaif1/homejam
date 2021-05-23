@@ -5,7 +5,7 @@ import React from "react";
 import { useStyles } from "./styles";
 
 const ShadowCard = ({ children, style }) => {
-  const classes = useStyles();
+  const classes = useStyles(style);
 
   return (
     <>
