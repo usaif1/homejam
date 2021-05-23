@@ -11,7 +11,6 @@ export const useStyles = makeStyles((theme) => ({
     backgroundRepeat: "no-repeat",
     backgroundPosition: "top",
     backgroundSize: "contain",
-    // height: "100vh",
     paddingTop: "1rem",
     marginBottom: "2rem",
   },

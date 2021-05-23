@@ -124,7 +124,7 @@ const Reviews = () => {
       <div className={classes.reviewsContainer}>
         <Swiper
           style={{ paddingTop: "1rem" }}
-          slidesPerView={window.innerWidth > 600 ? 3 : 1}
+          slidesPerView={window.innerWidth > 600 ? 3 : 1.1}
         >
           {reviews.map((review) => {
             return (
