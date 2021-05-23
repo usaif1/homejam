@@ -69,13 +69,13 @@ const Reviews = () => {
               height: "25rem",
             },
             mobile: {
-              width: 25,
-              height: "24rem",
-              top: "-21rem",
+              width: 22,
+              height: "18rem",
+              top: "-17rem",
               left: "-1rem",
               shadow: {
-                width: 28,
-                height: "24rem",
+                width: 25,
+                height: "18rem",
               },
             },
           }}
@@ -134,7 +134,7 @@ const Reviews = () => {
       <div className={classes.reviewsContainer}>
         <Swiper
           style={{ paddingTop: "1rem" }}
-          slidesPerView={window.innerWidth > 600 ? 3 : 1.2}
+          slidesPerView={window.innerWidth > 600 ? 3 : 1.25}
         >
           {reviews.map((review) => {
             return (

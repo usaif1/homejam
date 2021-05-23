@@ -23,7 +23,7 @@ export const useStyles = makeStyles((theme, style) => ({
     height: (style) => style.shadow.height,
   },
 
-  [theme.breakpoints.down("sm")]: {
+  [theme.breakpoints.down("xs")]: {
     card: {
       width: (style) => `${style.mobile.width}rem`,
       height: (style) => style.mobile.height,
