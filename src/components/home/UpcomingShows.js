@@ -74,19 +74,26 @@ const UpcomingShows = () => {
   };
 
   return (
-    <div className={classes.upcomingContainer}>
-      <Swiper
-        style={{ paddingTop: "1rem" }}
-        spaceBetween={window.innerWidth > 600 ? 50 : 5}
-        // slidesPerView={window.innerWidth > 600 ? 5 : }
-        // freeMode={true}
-        centeredSlides={true}
-      >
-        {artists.map((artist) => {
-          return <SwiperSlide>{artistCard(artist)}</SwiperSlide>;
-        })}
-      </Swiper>
-    </div>
+    <>
+      <div className={classes.upcomingHeadingContainer}>
+        <div className={classes.upcomingHeadingWrapper}>
+          <h2 className={classes.upcomingHeading}>Upcoming Shows</h2>
+          <h3 className={classes.upcomingSubheading}>View All</h3>
+        </div>
+        <hr className={classes.hr} />
+      </div>
+      <div className={classes.upcomingContainer}>
+        <Swiper
+          style={{ paddingTop: "1rem" }}
+          spaceBetween={window.innerWidth > 600 ? 50 : 5}
+          centeredSlides={true}
+        >
+          {artists.map((artist) => {
+            return <SwiperSlide>{artistCard(artist)}</SwiperSlide>;
+          })}
+        </Swiper>
+      </div>
+    </>
   );
 };
 

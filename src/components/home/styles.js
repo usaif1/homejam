@@ -87,7 +87,6 @@ export const useStyles = makeStyles((theme) => ({
 
   /*Upcoming Shows*/
   upcomingContainer: {
-    marginTop: "12.5rem",
     display: "flex",
     justifyContent: "space-around",
   },
@@ -164,6 +163,37 @@ export const useStyles = makeStyles((theme) => ({
     width: "300px",
   },
 
+  upcomingHeadingContainer: {
+    marginBottom: "2rem",
+    marginTop: "12.5rem",
+  },
+
+  upcomingHeadingWrapper: {
+    display: "flex",
+    justifyContent: "space-between",
+  },
+
+  upcomingHeading: {
+    color: "white",
+    fontSize: "3.2rem",
+    fontFamily: "'Libre Baskerville', serif",
+    margin: "0",
+  },
+  upcomingSubheading: {
+    color: "#E5C558",
+    fontSize: "1.6rem",
+    margin: "0",
+  },
+
+  hr: {
+    background: "blue",
+    width: "5rem",
+    height: "0.3rem",
+    border: "none",
+    margin: "1rem 0 ",
+    borderRadius: "0.8rem",
+  },
+
   /*Media Queries*/
   [theme.breakpoints.down("sm")]: {
     /*navbar*/
@@ -191,6 +221,9 @@ export const useStyles = makeStyles((theme) => ({
     },
     labelNumber: {
       margin: "0",
+    },
+    upcomingHeading: {
+      fontSize: "2rem",
     },
   },
 }));
