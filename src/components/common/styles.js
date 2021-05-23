@@ -5,7 +5,7 @@ export const useStyles = makeStyles((theme, style) => ({
   card: {
     position: "relative",
     background: "rgba(17, 18, 41, 1)",
-    width: (style) => `${style.width}rem`,
+    width: (style) => `${style.width - 1}rem`,
     height: (style) => style.height,
     borderRadius: (style) => style.borderRadius,
     border: (style) => style.border,
@@ -19,8 +19,8 @@ export const useStyles = makeStyles((theme, style) => ({
     borderRadius: (style) => style.borderRadius,
     background: (style) => style.background,
     zIndex: "-1",
-    width: (style) => `${style.width - 1}rem`,
-    height: (style) => style.height,
+    width: (style) => `${style.shadow.width}rem`,
+    height: (style) => style.shadow.height,
   },
 
   [theme.breakpoints.down("sm")]: {
@@ -29,8 +29,9 @@ export const useStyles = makeStyles((theme, style) => ({
       height: (style) => style.mobile.height,
     },
     shadow: {
-      width: (style) => `${style.mobile.width - 1}rem`,
-      height: (style) => style.mobile.height,
+      width: (style) =>
+        `${style.mobile.shadow?.width - 1}rem` || `${style.mobile.width}`,
+      height: (style) => style.mobile.shadow?.height || style.mobile.height,
       top: (style) => style.mobile.top,
       left: (style) => style.mobile.left,
     },

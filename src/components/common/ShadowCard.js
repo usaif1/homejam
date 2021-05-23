@@ -8,12 +8,12 @@ const ShadowCard = ({ children, style }) => {
   const classes = useStyles(style);
 
   return (
-    <>
+    <div>
       <div className={classes.card}>
         {children}
         <div className={classes.shadow} />
       </div>
-    </>
+    </div>
   );
 };
 
