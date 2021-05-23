@@ -2,6 +2,7 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { ArrowBack, ArrowForward } from "@material-ui/icons";
+import { Slide } from "react-reveal";
 import { v4 as uuid } from "uuid";
 
 // Import Swiper styles
@@ -51,57 +52,66 @@ const Reviews = () => {
 
   const reviewCard = (review) => {
     return (
-      <ShadowCard
-        style={{
-          background:
-            "linear-gradient(143.63deg, #276C73 5.43%, #5293E8 110.6%)",
-          width: 38,
-          height: "25rem",
-          border: "2px solid #E5AF56",
-          borderRadius: "1.6rem",
-          top: "-20rem",
-          left: "2rem",
-          padding: "0 0 0 2rem",
-
-          mobile: {
-            width: 27,
-            height: "24rem",
-            top: "-21rem",
-            left: "2rem",
-          },
-        }}
-      >
-        <div className={classes.reviewHeader}>
-          <div>
-            <img
-              src={review.img}
-              alt="reviewer"
-              style={{
-                objectFit: "contain",
-                verticalAlign: "bottom",
-              }}
-            />
-          </div>
-          <div className={classes.reviewNameContainer}>
-            <p>{review.name}</p>
-            <div style={{ display: "flex", alignItems: "baseline" }}>
-              <div className={classes.flag}>
-                <img
-                  src={review.flag}
-                  alt="flag"
-                  style={{
-                    objectFit: "contain",
-                    verticalAlign: "bottom",
-                    width: "100%",
-                  }}
-                />
+      <Slide right>
+        <ShadowCard
+          style={{
+            background:
+              "linear-gradient(143.63deg, #276C73 5.43%, #5293E8 110.6%)",
+            width: 38,
+            height: "25rem",
+            border: "2px solid #E5AF56",
+            borderRadius: "1.6rem",
+            top: "-20rem",
+            left: "-1rem",
+            padding: "0 0 0 2rem",
+            shadow: {
+              width: 39,
+              height: "25rem",
+            },
+            mobile: {
+              width: 25,
+              height: "24rem",
+              top: "-21rem",
+              left: "-1rem",
+              shadow: {
+                width: 28,
+                height: "24rem",
+              },
+            },
+          }}
+        >
+          <div className={classes.reviewHeader}>
+            <div>
+              <img
+                src={review.img}
+                alt="reviewer"
+                style={{
+                  objectFit: "contain",
+                  verticalAlign: "bottom",
+                }}
+              />
+            </div>
+            <div className={classes.reviewNameContainer}>
+              <p>{review.name}</p>
+              <div style={{ display: "flex", alignItems: "baseline" }}>
+                <div className={classes.flag}>
+                  <img
+                    src={review.flag}
+                    alt="flag"
+                    style={{
+                      objectFit: "contain",
+                      verticalAlign: "bottom",
+                      width: "100%",
+                    }}
+                  />
+                </div>
+                <p className={classes.location}>{review.location}</p>
               </div>
-              <p className={classes.location}>{review.location}</p>
             </div>
           </div>
-        </div>
-        <p className={classes.reviewText}>{review.text}</p>
-      </ShadowCard>
+          <p className={classes.reviewText}>{review.text}</p>
+        </ShadowCard>
+      </Slide>
     );
   };
 
@@ -124,7 +134,7 @@ const Reviews = () => {
       <div className={classes.reviewsContainer}>
         <Swiper
           style={{ paddingTop: "1rem" }}
-          slidesPerView={window.innerWidth > 600 ? 3 : 1.1}
+          slidesPerView={window.innerWidth > 600 ? 3 : 1.2}
         >
           {reviews.map((review) => {
             return (
