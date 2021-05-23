@@ -5,6 +5,7 @@ import {
   CalendarTodayOutlined,
   FavoriteBorderOutlined,
 } from "@material-ui/icons";
+import { v4 as uuid } from "uuid";
 
 // Import Swiper styles
 import "swiper/swiper-bundle.css";
@@ -24,21 +25,25 @@ const labels = [
     ),
     number: "0",
     text: "Label",
+    id: uuid(),
   },
   {
     icon: <CalendarTodayOutlined style={{ ...iconStyles }} />,
     number: "0",
     text: "Label",
+    id: uuid(),
   },
   {
     icon: <CalendarTodayOutlined style={{ ...iconStyles }} />,
     number: "0",
     text: "Label",
+    id: uuid(),
   },
   {
     icon: <CalendarTodayOutlined style={{ ...iconStyles }} />,
     number: "0",
     text: "Label",
+    id: uuid(),
   },
 ];
 
@@ -59,7 +64,11 @@ const Labels = () => {
       >
         {labels.map((label) => {
           return (
-            <SwiperSlide style={{ display: "flex" }} slidesPerView={2}>
+            <SwiperSlide
+              style={{ display: "flex" }}
+              slidesPerView={2}
+              key={label.id}
+            >
               <div className={classes.roundedContainer}>
                 <div>{label.icon}</div>
                 <p className={classes.labelNumber}>{label.number}</p>

@@ -201,7 +201,6 @@ export const useStyles = makeStyles((theme) => ({
     border: "2px solid #E5AF56",
     position: "relative",
     zIndex: "2",
-    background: "black",
     paddingLeft: "2.4rem",
     background: "#0A0B1A",
     borderRadius: "1.6rem",
@@ -231,6 +230,7 @@ export const useStyles = makeStyles((theme) => ({
   reviewText: {
     margin: "5rem 0 0 0",
     fontSize: "1.6rem",
+    fontFamily: "'Nunito', sans-serif",
   },
 
   /*Media Queries*/
@@ -263,6 +263,9 @@ export const useStyles = makeStyles((theme) => ({
     },
     upcomingHeading: {
       fontSize: "2rem",
+    },
+    reviewText: {
+      fontSize: "1.4rem",
     },
   },
 }));

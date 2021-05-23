@@ -2,8 +2,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Search, Menu, LocalMallOutlined } from "@material-ui/icons";
-// import LocalMallOutlined from "@material-ui/icons/LocalMallOutlined";
-// import  from "@material-ui/icons/Menu";
+import { v4 as uuid } from "uuid";
 
 //imports
 import homejamNavLogo from "../../assets/navbar/homejam-nav-logo.png";
@@ -57,7 +56,7 @@ const Navbar = () => {
   const renderDeskTop = () => {
     return deskTopLinks.map((link) => {
       return (
-        <div className={classes.linkContainer}>
+        <div className={classes.linkContainer} key={uuid()}>
           {link.icon}
           <Link to={link.path} className={classes.navLink}>
             {link.text}
@@ -69,7 +68,11 @@ const Navbar = () => {
 
   const renderMobile = () => {
     return mobileLinks.map((link) => {
-      return <div className={classes.linkContainer}>{link.icon}</div>;
+      return (
+        <div className={classes.linkContainer} key={uuid()}>
+          {link.icon}
+        </div>
+      );
     });
   };
 
@@ -83,16 +86,6 @@ const Navbar = () => {
         />
       </div>
       <div className={classes.linksListContainer}>
-        {/* {deskTopLinks.map((link) => {
-          return (
-            <div className={classes.linkContainer}>
-              {link.icon}
-              <Link to={link.path} className={classes.navLink}>
-                <p className={classes.linkText}>{link.text}</p>
-              </Link>
-            </div>
-          );
-        })} */}
         {window.innerWidth > 600 ? renderDeskTop() : renderMobile()}
       </div>
     </nav>

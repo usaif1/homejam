@@ -2,6 +2,7 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { ArrowBack, ArrowForward } from "@material-ui/icons";
+import { v4 as uuid } from "uuid";
 
 // Import Swiper styles
 import "swiper/swiper-bundle.css";
@@ -17,6 +18,7 @@ import review3 from "../../assets/reviews/review3.png";
 
 const reviews = [
   {
+    id: uuid(),
     name: "Hellen Jummy",
     text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae in donec in nisi vitae. Vestibulum pellentesque eget 
         laoreet adipiscing. `,
@@ -25,6 +27,7 @@ const reviews = [
     location: "Palo Alto, CA",
   },
   {
+    id: uuid(),
     name: "Isaac Oluwatemilorun",
     text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae in donec in nisi vitae. Vestibulum pellentesque eget 
         laoreet adipiscing. `,
@@ -33,6 +36,7 @@ const reviews = [
     location: "Palo Alto, CA",
   },
   {
+    id: uuid(),
     name: "Hellen Jummy",
     text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae in donec in nisi vitae. Vestibulum pellentesque eget 
         laoreet adipiscing. `,
@@ -55,15 +59,15 @@ const Reviews = () => {
           height: "25rem",
           border: "2px solid #E5AF56",
           borderRadius: "1.6rem",
-          top: "-19.5rem",
+          top: "-20rem",
           left: "2rem",
           padding: "0 0 0 2rem",
 
           mobile: {
-            width: 31,
+            width: 27,
             height: "24rem",
-            top: "-20.5rem",
-            left: "1rem",
+            top: "-21rem",
+            left: "2rem",
           },
         }}
       >
@@ -84,6 +88,7 @@ const Reviews = () => {
               <div className={classes.flag}>
                 <img
                   src={review.flag}
+                  alt="flag"
                   style={{
                     objectFit: "contain",
                     verticalAlign: "bottom",
@@ -119,11 +124,12 @@ const Reviews = () => {
       <div className={classes.reviewsContainer}>
         <Swiper
           style={{ paddingTop: "1rem" }}
-          spaceBetween={window.innerWidth > 600 ? 50 : 5}
-          centeredSlides={true}
+          slidesPerView={window.innerWidth > 600 ? 3 : 1}
         >
           {reviews.map((review) => {
-            return <SwiperSlide>{reviewCard(review)}</SwiperSlide>;
+            return (
+              <SwiperSlide key={review.id}>{reviewCard(review)}</SwiperSlide>
+            );
           })}
         </Swiper>
       </div>

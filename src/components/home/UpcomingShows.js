@@ -1,6 +1,7 @@
 //dependencies
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { v4 as uuid } from "uuid";
 import ArrowRightAltIcon from "@material-ui/icons/ArrowRightAlt";
 
 // Import Swiper styles
@@ -17,21 +18,25 @@ import { useStyles } from "./styles";
 
 const artists = [
   {
+    id: uuid(),
     name: "Benny Dayal",
     img: benny,
     badge: "Folk",
   },
   {
+    id: uuid(),
     name: "Vijay Yesudas",
     img: vijay,
     badge: "Bollywood",
   },
   {
+    id: uuid(),
     name: "Andrea Jeremiah",
     img: andrea,
     badge: "Folk",
   },
   {
+    id: uuid(),
     name: "Shilpa Rao",
     img: shilpa,
     badge: "Folk",
@@ -103,11 +108,14 @@ const UpcomingShows = () => {
       <div className={classes.upcomingContainer}>
         <Swiper
           style={{ paddingTop: "1rem" }}
-          spaceBetween={window.innerWidth > 600 ? 50 : 5}
-          centeredSlides={true}
+          // spaceBetween={window.innerWidth > 600 ? 50 : 5}
+          // centeredSlides={true}
+          slidesPerView={window.innerWidth > 600 ? 4 : 1}
         >
           {artists.map((artist) => {
-            return <SwiperSlide>{artistCard(artist)}</SwiperSlide>;
+            return (
+              <SwiperSlide key={artist.id}>{artistCard(artist)}</SwiperSlide>
+            );
           })}
         </Swiper>
       </div>

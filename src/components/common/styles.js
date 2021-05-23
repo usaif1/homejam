@@ -29,7 +29,7 @@ export const useStyles = makeStyles((theme, style) => ({
       height: (style) => style.mobile.height,
     },
     shadow: {
-      width: (style) => `${style.mobile.width}rem`,
+      width: (style) => `${style.mobile.width - 1}rem`,
       height: (style) => style.mobile.height,
       top: (style) => style.mobile.top,
       left: (style) => style.mobile.left,
