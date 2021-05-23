@@ -108,9 +108,7 @@ const UpcomingShows = () => {
       <div className={classes.upcomingContainer}>
         <Swiper
           style={{ paddingTop: "1rem" }}
-          // spaceBetween={window.innerWidth > 600 ? 50 : 5}
-          // centeredSlides={true}
-          slidesPerView={window.innerWidth > 600 ? 4 : 1}
+          slidesPerView={window.innerWidth > 600 ? 4 : 1.1}
         >
           {artists.map((artist) => {
             return (
