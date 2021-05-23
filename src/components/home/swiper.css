@@ -1,0 +1,11 @@
+.swiper-container {
+  width: 100%;
+}
+
+.swiper-wrapper {
+  display: flex;
+}
+
+/* media queries for swiper  */
+@media only screen and (max-width: 600px) {
+}
